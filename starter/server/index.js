@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 4000
 const { getAllPosts, getCurrentUserPosts, addPost, editPost, deletePost } = require('./controllers/posts');
 const { register, login } = require('./controllers/auth');
 
+
 app.use(cors());
 app.use(express.json());
 
