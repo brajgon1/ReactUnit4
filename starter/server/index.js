@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 4005
 const { getAllPosts, getCurrentUserPosts, addPost, editPost, deletePost } = require('./controllers/posts');
 const { register, login } = require('./controllers/auth');
 
