@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
-const SECRET = process.env.SECRET;
 require("dotenv").config();
+// const { SECRET } = process.env;
 
 const createToken = (username, id) => {
   return jwt.sign(
@@ -18,9 +18,10 @@ const createToken = (username, id) => {
 module.exports = {
   login: async (req, res) => {
     let { username, password } = req.body;
-    let token = createToken(username, password);
+    // let token = createToken(username, password);
+    console.log(process.env.SECRET);
     console.log("login");
-    res.status(200).send(token);
+    res.status(200).send("token");
   },
 
   register: async (req, res) => {
